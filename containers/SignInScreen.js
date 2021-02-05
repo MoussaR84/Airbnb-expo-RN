@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   },
   input: {
     paddingLeft: 5,
-    color: colors.white,
+    color: colors.grey,
     height: 40,
     marginBottom: 10,
     borderBottomWidth:2,
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   description: {
-    color: colors.white,
+    color: colors.red,
     textAlignVertical: "top",
     marginBottom: 10,
     borderTopColor: colors.red,
@@ -154,13 +154,13 @@ const styles = StyleSheet.create({
     width: "55%",
     height: 55,
     borderRadius: 50,
-    borderColor: colors.white,
+    borderColor: colors.grey,
     borderWidth: 3,
     justifyContent: "center",
     alignItems: "center",
   },
   buttonText: {
-    color: colors.white,
+    color: colors.grey,
     fontWeight: "bold",
     fontSize: 20,
     lineHeight: 20,
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   warningText: {
-    color: colors.white,
+    color: colors.red,
     fontWeight: "bold",
   },
 });
