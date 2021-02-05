@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { useNavigation } from "@react-navigation/core";
 import { StatusBar,Button, Text, TextInput, View, TouchableOpacity,StyleSheet,Image,SafeAreaView,TouchableHighlight } from "react-native";
 import { Entypo } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from"../assets/colors";
 import axios from "axios";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
@@ -23,13 +24,11 @@ export default function SignInScreen({ navigation, setToken, setUser }) {
         if (response.data.token && response.data.id) {
           // Envoyer token à la fonction qui gère le cookie
           setToken(response.data.token);
-          // Stocker User Id
           setUser(response.data.id);
         } else {
           alert("An error occurred");
         }
       } catch (error) {
-        //console.log("ERROR", error.message);
         setErrorMessage(error.response.data.error);
       }
     } else {
@@ -58,17 +57,19 @@ export default function SignInScreen({ navigation, setToken, setUser }) {
             }}
             value={email}
           />
-
+ 
           <TextInput
             style={styles.input}
             placeholder="Password"
             placeholderTextColor={colors.paleRed}
-            // secureTextEntry={true}
+            secureTextEntry={true}
             onChangeText={(text) => {
               setPassword(text);
             }}
             value={password}
+            
           />
+          
 
           <View style={styles.buttonArea}>
             <View style={styles.warningView}>
