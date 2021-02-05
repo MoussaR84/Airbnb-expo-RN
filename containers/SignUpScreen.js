@@ -54,7 +54,7 @@ export default function SignUpScreen({ navigation, setToken, setUser }) {
 
           //console.log("SIGN UP", response.data);
           if (response.data.token && response.data._id) {
-            alert("TOUT EST OK");
+            alert("Bienvenue sur Airbnb");
             // Stocker Token
             setToken(response.data.token);
             // Stocker User Id
